@@ -2,7 +2,7 @@ const reverseString = function(word) {
     let reverse = '';
     let length = word.length;
     for (let i = 0; i < length; i++) {
-        reverse[1] += word[i];
+        reverse += word[length - i - 1];
     }
     return reverse;
 };
