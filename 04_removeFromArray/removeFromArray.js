@@ -14,15 +14,20 @@ const removeFromArray = function(array, ...element) // ... three dots are used t
         return newArray;
     } else if (eLength > 1) {
         for (let i = 0; i < length; i++) {
+            let matchFound = false;
             for (const el of element) {
                 if (array[i] === el) {
-                    continue;
+                    matchFound = true;
+                    break;
                 }
+            }
+            if (!matchFound) {
+                newArray.push(array[i]);
             }
         }
         return newArray;
     } else {
-        return newArray;
+        return array;
     }
     
 };
