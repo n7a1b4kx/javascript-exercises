@@ -1,8 +1,9 @@
 const removeFromArray = function(array, ...element) // ... three dots are used to capture other arguments and formatted as an array
 {
     let length = array.length;
+    let eLength = element.length;
     let newArray = [];
-    if (element.length === 1) {
+    if (eLength === 1) {
         for (let i = 0; i < length; i++) {
             if (array[i] === element[0]) {
                 continue;
@@ -11,9 +12,9 @@ const removeFromArray = function(array, ...element) // ... three dots are used t
             }
         }
         return newArray;
-    } else {
-        for (let i = 0; i < length; i++) {
-            for (const el of element) {
+    } else if (eLength > 1) {
+        for (const el of element) {
+            for (let i = 0; i < length; i++) {
                 if (array[i] === el) {
                     continue;
                 } else {
@@ -21,6 +22,9 @@ const removeFromArray = function(array, ...element) // ... three dots are used t
                 }
             }
         }
+        return newArray;
+    } else {
+        return newArray;
     }
     
 };
