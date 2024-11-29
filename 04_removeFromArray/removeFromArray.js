@@ -13,12 +13,10 @@ const removeFromArray = function(array, ...element) // ... three dots are used t
         }
         return newArray;
     } else if (eLength > 1) {
-        for (const el of element) {
-            for (let i = 0; i < length; i++) {
+        for (let i = 0; i < length; i++) {
+            for (const el of element) {
                 if (array[i] === el) {
                     continue;
-                } else {
-                    newArray.push(array[i]);
                 }
             }
         }
