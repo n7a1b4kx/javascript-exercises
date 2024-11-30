@@ -1,7 +1,7 @@
 const sumAll = function(firstNum, secNum) {
     let total = 0;
     let smallNum, bigNum;
-    if (firstNum > 0 && secNum > 0) {
+    if ((firstNum > 0 && secNum > 0) && (typeof(firstNum) === 'number' && typeof(secNum) === 'number')) {
         if (firstNum > secNum) {
             bigNum = firstNum;
             smallNum = secNum;
