@@ -9,11 +9,14 @@ const sumAll = function(firstNum, secNum) {
             bigNum = secNum;
             smallNum = firstNum;
         }
+        for ( smallNum; smallNum <= bigNum; smallNum++) {
+            total += smallNum;
+        }
+        return total;
+    } else {
+        return 'ERROR';
     }
-    for ( smallNum; smallNum <= bigNum; smallNum++) {
-        total += smallNum;
-    }
-    return total;
+    
 };
 
 // Do not edit below this line
