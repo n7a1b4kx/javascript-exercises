@@ -1,37 +1,41 @@
-const add = function(...array) {
-  return array.reduce((total, currentValue) => {
+const add = function(a,b) {
+  return a + b;
+};
+
+const subtract = function(a, b) {
+	return a - b;
+};
+
+const sum = function(array) {
+	return array.reduce((total, currentValue) => {
     return total + currentValue;
   });
 };
-const subtract = function(...array) {
-	return array.reduce((total, currentValue) => {
-    return total - currentValue;
+
+const multiply = function(array) {
+  return array.reduce((total, currentValue) => {
+    return total * currentValue;
   });
 };
 
-console.log(add(1,1));
-const sum = function() {
-	
+const power = function(array) {
+	return array.reduce((total, currentValue) => {
+    return total ** currentValue;
+  });
 };
 
-const multiply = function() {
-
-};
-
-const power = function() {
-	
-};
-
-const factorial = function() {
-	
+const factorial = function(array) {
+	return array.reduce((total, currentValue) => {
+    return total * currentValue;
+  });
 };
 
 // Do not edit below this line
-// module.exports = {
-//   add,
-//   subtract,
-//   sum,
-//   multiply,
-//   power,
-//   factorial
-// };
+module.exports = {
+  add,
+  subtract,
+  sum,
+  multiply,
+  power,
+  factorial
+};
