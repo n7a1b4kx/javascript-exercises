@@ -1,13 +1,15 @@
 const add = function(...array) {
   return array.reduce((total, currentValue) => {
     return total + currentValue;
-  }, 0);
+  });
 };
-console.log(add(1,1));
-const subtract = function() {
-	
+const subtract = function(...array) {
+	return array.reduce((total, currentValue) => {
+    return total - currentValue;
+  });
 };
 
+console.log(add(1,1));
 const sum = function() {
 	
 };
