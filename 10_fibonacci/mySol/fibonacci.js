@@ -1,5 +1,4 @@
 const fibonacci = function(number) {
-    let sum = 0;
     let newArr = [];
     for (let i = 0; i < number; i++) {
         (i === 0) ? newArr.push(1): (i === 1) ? newArr.push(1): newArr.push(newArr[i-1] + newArr[i-2]);
