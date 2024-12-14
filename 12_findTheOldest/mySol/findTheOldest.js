@@ -6,6 +6,10 @@ const findTheOldest = function(peoples) {
     });
 
     peoples.forEach((people) => {
+        return people.age = people.yearOfDeath - people.yearOfBirth;
+    });
+
+    peoples.forEach((people) => {
         console.log(people);
     });
 
