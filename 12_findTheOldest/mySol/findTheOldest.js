@@ -9,7 +9,15 @@ const findTheOldest = function(peoples) {
         return people.age = people.yearOfDeath - people.yearOfBirth;
     });
 
-    return peoples;
+    let eldest = peoples.reduce((oldest, currentValue) => {
+        if (oldest.age < currentValue.age) {
+            return currentValue;
+        } else {
+            return oldest;
+        }
+    });
+
+    return eldest;
 }
 
 // Do not edit below this line
