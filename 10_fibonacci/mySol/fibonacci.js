@@ -1,15 +1,13 @@
 const fibonacci = function(number) {
     let sum = 0;
-    let arr = createArray(0, number, 1);
-};
-
-function createArray(start, stop, step) {
-    return Array.from(
-        {length:stop+1}, (_, i) => start + i * step,
-    );
+    let newArr = [];
+    for (let i = 0; i < number; i++) {
+        (i === 0) ? newArr.push(1): (i === 1) ? newArr.push(1): newArr.push(newArr[i-1] + newArr[i-2]);
+    }
+    console.log(newArr);
 }
 
-console.log(fibonacci(4));
+fibonacci(6);
 
 // Do not edit below this line
 // module.exports = fibonacci;
